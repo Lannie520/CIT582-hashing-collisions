@@ -26,7 +26,7 @@ def hash_collision(k):
         else:
             table[hash] = x
 #Test the result
-print(hash_collision(64))
+print(hash_collision(20))
 
 
 
