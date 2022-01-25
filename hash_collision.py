@@ -13,7 +13,7 @@ def hash_collision(k):
     table = {}
 
     while True:
-        x = os.urandom(100)
+        x = os.urandom(64)
         # Bin turns strings to bytes
         hash = bin(int(hashlib.sha256(x).hexdigest(), 16))[-k:]
         if hash in table:
@@ -26,7 +26,7 @@ def hash_collision(k):
         else:
             table[hash] = x
 #Test the result
-print(hash_collision(20))
+print(hash_collision(16))
 
 
 
